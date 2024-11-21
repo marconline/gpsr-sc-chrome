@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Sidepanel</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Welcome!</h1>
+
+    <p>With this extension you can upload Manufacturer &amp; Responsible Persons data to Amazon.</p>
+    <p>You can load Manufacturer &amp; Responible Persons data either from your <a href="https://www.marketrock.it" target="_blank">MarketRock</a> account or uploading a CSV file.</p>
+    <p>After you retrieved data, reload Seller Central page. Push data using the Submit button.</p>
+
+    <div id="liveToast" class="toast top-0 start-0 align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <section>
+        <h1>Data ingestion</h1>
+        <button class="btn btn-primary" id="btnDownload">Retrieve from MarketRock</button>
+        <button class="btn btn-primary" id="btnUpload">Upload file</button>
+    </section>
+
+
+    <section id="data">
+        <hr />
+        <h1>Loaded data</h1>
+        <button id="btnManufacturers" class="btn btn-primary">Manufacturers</button>
+        <button id="btnResponsiblePersons" class="btn btn-primary">Responsible Persons</button>
+
+
+        <h1><span id="currentMode"></span></h1>
+
+
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th colspan="3">
+                        <p>If you see question marks, just refresh Seller Central page, keeping this panel open!</p>
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>Company</th>
+                    <th>Submit</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="clear">
+        <hr />
+        <h1>Clear data</h1>
+        <p>If you want to start from scratch you can clear all data. This button will just clear local data and won't do anything on Seller Central, don't worry.</p>
+        <button class="btn btn-primary" id="btnClear">Clear data</button>
+    </section>
+
+    <hr />
+    <p>Extension developed by <a href="https://www.marketrock.it" target="_blank">MarketRock</a>.</p>
+
+
+
+    <script src="/scripts/jquery-3.7.1.min.js"></script>
+    <script src="/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/content.js"></script>
+
+</body>
+</html>

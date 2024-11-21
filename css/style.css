@@ -1,0 +1,29 @@
+body {
+    font-size: 90%;
+    padding: 10px
+}
+
+h1 {
+    font-size: 110%
+}
+
+#resultsTable {
+    font-size: 80%;
+    border: 1px solid #CCC;
+    display: none;
+}
+
+    #resultsTable th, #resultsTable td {
+        padding: 2px;
+        border: 1px solid #CCC;
+        border-collapse: collapse
+    }
+
+.btn {
+    font-size: 90%;
+    margin: 5px
+}
+
+#btnManufacturers, #btnResponsiblePersons, #btnClear {
+    display: none
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Sidepanel</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1><a href="sidepanel.html">Home</a> &raquo; Upload CSV File</h1>
+
+
+    <p>You can upload Manufacturers / Responsible Persons data using a CSV upload.</p>
+    <p><a href="/content/demo.csv">Find here an example</a> of the model you must use.</p>
+    <p>All columns are required, but they can be left empty. Only CompanyName and one between Email and URL are required.</p>
+    <p>When you upload a file, please choose if you want to import data as Manufacturers or Responsible Persons.</p>
+
+    <hr />
+
+    <section>
+        <h1>Upload</h1>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fileInput">Select your CSV file</label>
+                <input class="custom-file-input" type="file" id="fileInput" accept=".csv" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-check">
+                <input class="form-check-input" id="rbManufacturers" type="radio" name="type" value="manufacturers" checked />
+                <label class="form-check-label" for="rbManufacturers">Manufacturers</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" id="rbResponsiblePersons" type="radio" name="type" value="responsiblePersons" />
+                <label class="form-check-label" for="rbResponsiblePersons">Responsible Persons</label>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="btnProcess">Process</button>
+        <div id="messages"></div>
+    </section>
+
+
+    <script src="/scripts/jquery-3.7.1.min.js"></script>
+    <script src="/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/upload.js"></script>
+
+</body>
+</html>
