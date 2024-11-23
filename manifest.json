@@ -32,7 +32,17 @@
   },
   "content_scripts": [
     {
-      "matches": [ "https://sellercentral.amazon.co.uk/*", "https://sellercentral-europe.amazon.com/*" ],
+      "matches": [ 
+        "https://sellercentral.amazon.co.uk/*", 
+        "https://sellercentral-europe.amazon.com/*", 
+        "https://sellercentral.amazon.com.be/*",
+        "https://sellercentral.amazon.de/*",
+        "https://sellercentral.amazon.fr/*",
+        "https://sellercentral.amazon.it/*",
+        "https://sellercentral.amazon.es/*",
+        "https://sellercentral.amazon.nl/*",
+        "https://sellercentral.amazon.pl/*"
+      ],
       "js": [ "scripts/amazon.js" ]
     }
   ]
